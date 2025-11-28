@@ -4,6 +4,105 @@
 
 El **Sistema de Alerta Temprana (SAT)** es una aplicación web desarrollada para el Instituto Profesional Crecer Más que permite identificar y gestionar estudiantes en riesgo de deserción académica. El sistema utiliza inteligencia artificial y análisis de datos para calcular la probabilidad de deserción de cada estudiante basándose en múltiples indicadores académicos.
 
+## 🛠️ ¿Cómo instalar el proyecto en tu computadora?
+
+### Requisitos previos
+Antes de comenzar, asegúrate de tener instalado:
+- **Node.js** versión 18 o superior ([Descargar](https://nodejs.org/))
+- **npm** (incluido con Node.js) o **yarn** como gestor de paquetes
+- **Git** para clonar el repositorio ([Descargar](https://git-scm.com/))
+
+### Pasos de instalación
+
+#### 1. Clonar el repositorio
+```bash
+git clone https://github.com/AlvaroAjg/IP_Crecer_Mas.git
+cd IP_Crecer_Mas
+```
+
+#### 2. Instalar dependencias
+```bash
+npm install
+# O si usas yarn
+yarn install
+```
+
+#### 3. Ejecutar en modo desarrollo
+```bash
+npm run dev
+# O si usas yarn
+yarn dev
+```
+
+La aplicación se abrirá automáticamente en `http://localhost:3000`
+
+#### 4. Compilar para producción
+```bash
+npm run build
+npm start
+# O si usas yarn
+yarn build
+yarn start
+```
+
+### Requisitos del sistema
+- **RAM mínima**: 2 GB
+- **Espacio en disco**: 500 MB
+- **Navegador compatible**: Chrome, Firefox, Safari o Edge (versiones recientes)
+
+---
+
+## 🔧 ¿Cómo funciona técnicamente?
+
+### Tecnología utilizada
+Este proyecto está construido con tecnologías modernas:
+
+| Tecnología | Versión | Uso |
+|-----------|---------|-----|
+| **Next.js** | 16.0.3 | Framework React para aplicaciones web |
+| **React** | 19.2.0 | Librería para interfaz de usuario |
+| **TypeScript** | 5.x | Tipado estático en JavaScript |
+| **Tailwind CSS** | 3.4.17 | Estilos CSS predefinidos |
+| **Recharts** | 3.4.1 | Gráficos interactivos |
+| **Lucide React** | 0.554.0 | Iconos vectoriales |
+
+### Estructura de la aplicación
+
+**Frontend (Cliente):**
+- La aplicación es una SPA (Single Page Application) que se ejecuta en el navegador
+- Está desarrollada con React y Next.js usando componentes funcionales
+- Utiliza estado local (`useState`) para gestionar la interactividad
+- Los datos se cargan desde un archivo simulado en `app/page.tsx`
+
+**Estilos:**
+- Diseño responsivo con Tailwind CSS
+- Componentes modulares reutilizables
+- Paleta de colores personalizada para identificar niveles de riesgo
+
+### Flujo de funcionamiento
+
+1. **Carga inicial**: El usuario accede a `http://localhost:3000`
+2. **Dashboard**: Se muestra la página principal con métricas clave
+3. **Navegación**: El usuario puede navegar entre diferentes secciones:
+   - Dashboard Principal
+   - Gestión de Alertas
+   - Fichas de estudiantes individuales
+   - Centro de Campañas
+   - Reportes Académicos
+   - Configuración
+4. **Interactividad**: Los filtros, búsquedas y visualizaciones se actualizan en tiempo real
+
+### Datos y Lógica
+
+- **Datos simulados**: Actualmente utiliza datos de ejemplo para demostración
+- **Indicadores de riesgo**: Se calcula basándose en:
+  - Porcentaje de asistencia
+  - Promedio de notas
+  - Historial de comportamiento
+  - Sentimiento en comentarios de foros
+
+---
+
 ## 🎯 ¿Qué es este proyecto?
 
 Este es un dashboard interactivo diseñado para tutores y coordinadores académicos que permite:
